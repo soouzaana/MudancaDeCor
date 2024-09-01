@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Mudança de cor com eventos de JavaScript</title>
+       <style>
+        #quadrado{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            cursor: pointer;
+           transition: background-color 0.3s;
+         }
+    </style>
+</head>
+<body>
+      <div id="quadrado"></div>
+     <script>
+        const quadrado = document.getElementById('quadrado');
+           quadrado.addEventListener('click', () => {
+            quadrado.style.backgroundColor = quadrado.style.backgroundColor === 'blue' ? 'red' : 'blue';
+        });
+     </script>
+ </body>
+</html>
